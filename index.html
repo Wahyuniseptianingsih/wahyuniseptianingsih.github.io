@@ -154,12 +154,10 @@
 
   .project{ padding:30px 0; }
   .project + .project{ border-top:1px solid var(--line);}
-  .project-head{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; cursor:pointer; }
+  .project-head{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; }
   .project-head h3{ font-size:20px; }
   .project-role{ font-size:13.5px; color:var(--purple); margin-top:4px; font-weight:600;}
-  .project-toggle{ font-size:13px; color:var(--ink-muted); flex-shrink:0; white-space:nowrap; }
-  .project-fields{ margin-top:16px; display:none; }
-  .project.open .project-fields{ display:block; }
+  .project-fields{ margin-top:16px; }
   .field-row{ display:grid; grid-template-columns:110px 1fr; gap:14px; padding:9px 0; font-size:14px; border-top:1px solid var(--line); }
   .field-row:first-child{ border-top:none; }
   .field-label{ color:var(--ink-muted); font-size:12.5px; padding-top:2px;}
@@ -217,6 +215,7 @@
     <img class="nav-cat" src="assets/karakter-kucing-berjalan.gif" alt="Karakter kucing berjalan">
     <div class="navlinks">
       <a href="#projects">Proyek</a>
+      <a href="#karya-ilmiah">Karya Ilmiah</a>
       <a href="#skills">Skill</a>
       <a href="#certs">Sertifikat</a>
       <a href="#contact">Kontak</a>
@@ -262,7 +261,7 @@
 
   <section id="projects">
     <h2 class="section-title">Proyek</h2>
-    <p class="section-intro">Empat proyek pengembangan web, satu proyek desain karakter &amp; branding, serta satu publikasi jurnal ilmiah. Klik judulnya untuk buka detail.</p>
+    <p class="section-intro">Empat proyek pengembangan web dan satu proyek desain karakter &amp; branding.</p>
 
     <div class="project" data-project>
       <div class="project-head">
@@ -270,7 +269,6 @@
           <h3>SIKOM — Sistem Informasi Komplain &amp; Manajemen Aset</h3>
           <div class="project-role">Full-stack developer, proyek akademik</div>
         </div>
-        <div class="project-toggle">Detail</div>
       </div>
       <div class="project-fields">
         <div class="field-row">
@@ -313,7 +311,6 @@
           <h3>DigiLibrary — Sistem Perpustakaan Digital</h3>
           <div class="project-role">Full-stack developer, proyek akademik</div>
         </div>
-        <div class="project-toggle">Detail</div>
       </div>
       <div class="project-fields">
         <div class="field-row">
@@ -354,7 +351,6 @@
           <h3>Amanin — Website Security Checker</h3>
           <div class="project-role">Full-stack developer, proyek pribadi</div>
         </div>
-        <div class="project-toggle">Detail</div>
       </div>
       <div class="project-fields">
         <div class="field-row">
@@ -394,7 +390,6 @@
           <h3>Sistem Tiketing Bioskop Berbasis Web</h3>
           <div class="project-role">Full-stack developer, proyek akademik</div>
         </div>
-        <div class="project-toggle">Detail</div>
       </div>
       <div class="project-fields">
         <div class="field-row">
@@ -433,7 +428,6 @@
           <h3>TOTO — Karakter &amp; Branding Multimedia</h3>
           <div class="project-role">Character design &amp; branding, proyek kelompok</div>
         </div>
-        <div class="project-toggle">Detail</div>
       </div>
       <div class="project-fields">
         <div class="field-row">
@@ -480,13 +474,18 @@
       </div>
     </div>
 
+  </section>
+
+  <section id="karya-ilmiah">
+    <h2 class="section-title">Karya Ilmiah</h2>
+    <p class="section-intro">Publikasi jurnal ilmiah terindeks.</p>
+
     <div class="project" data-project>
       <div class="project-head">
         <div>
           <h3>Efektivitas Media Animasi 2D Berbasis MDLC dalam Meningkatkan Kesadaran Digital Footprint Remaja</h3>
           <div class="project-role">Penulis pertama, artikel jurnal ilmiah</div>
         </div>
-        <div class="project-toggle">Detail</div>
       </div>
       <div class="project-fields">
         <div class="field-row">
@@ -737,15 +736,6 @@
     requestAnimationFrame(physicsStep);
     render();
   })();
-
-  document.querySelectorAll('[data-project]').forEach(p=>{
-    const head = p.querySelector('.project-head');
-    const toggle = p.querySelector('.project-toggle');
-    head.addEventListener('click', ()=>{
-      const isOpen = p.classList.toggle('open');
-      toggle.textContent = isOpen ? 'Tutup' : 'Detail';
-    });
-  });
 </script>
 
 </body>
