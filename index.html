@@ -21,6 +21,8 @@
     --pink:#E1568F;
     --purple:#7C57C9;
     --line:#E8D6E9;
+    --blood:#8B1A1A;
+    --pink-pastel:#F2A9C6;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -53,8 +55,8 @@
 
   header.hero{ padding:76px 0 64px; position:relative; z-index:1;}
   .hero-grid{ display:grid; grid-template-columns:1fr 182px; gap:36px; align-items:start;}
-  .hero h1{ font-size:38px; line-height:1.2; margin-bottom:14px; font-style:italic; font-weight:700;}
-  .hero .tagline{ font-size:17px; color:var(--pink); margin-bottom:22px; max-width:52ch; font-weight:700;}
+  .hero h1{ font-size:38px; line-height:1.2; margin-bottom:14px; font-style:italic; font-weight:700; color:#1A1A1A;}
+  .hero .tagline{ font-size:17px; color:var(--blood); margin-bottom:22px; max-width:52ch; font-weight:700;}
 
   .lanyard-wrap{
     position:relative;
@@ -135,7 +137,8 @@
   }
   .bio{ font-size:15.5px; color:var(--ink-muted); max-width:60ch; margin-bottom:24px;}
   .contact-line{ font-size:14.5px; display:flex; flex-wrap:wrap; gap:4px 0; color:var(--ink-muted); font-weight:700;}
-  .contact-line a{ color:var(--ink); font-weight:600; }
+  .contact-line a{ color:var(--pink-pastel); font-weight:600; }
+  .contact-line a:hover{ color:var(--pink); }
   .contact-line .sep{ margin:0 10px; color:var(--line);}
 
   @media (max-width:600px){
