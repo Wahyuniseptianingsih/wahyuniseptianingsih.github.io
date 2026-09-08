@@ -12,6 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
   :root{
     --bg:#FBF5F9;
@@ -186,8 +188,13 @@
   .skill-group{ margin-bottom:20px; }
   .skill-group:last-child{ margin-bottom:0; }
   .skill-group h3{ font-size:14.5px; font-weight:700; font-family:'Manrope',sans-serif; margin-bottom:10px; color:var(--ink);}
-  .tag-wrap{ display:flex; flex-wrap:wrap; gap:8px; }
-  .tag-wrap span{ font-size:13.5px; color:var(--ink-muted); background:var(--panel); border-radius:20px; padding:6px 13px; }
+  .tag-wrap{ display:flex; flex-wrap:wrap; gap:10px; }
+  .tag-wrap span{ width:42px; height:42px; border-radius:50%; background:var(--panel); display:inline-flex; align-items:center; justify-content:center; position:relative; flex-shrink:0; }
+  .tag-wrap span i{ font-size:18px; color:var(--ink-muted); }
+  .tag-wrap span i.colored{ color:inherit; }
+  .tag-wrap span .fa-solid, .tag-wrap span .fas{ color:var(--purple); }
+  .tag-wrap span.multi i{ font-size:14px; }
+  .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 
   .cert-list{ display:flex; flex-direction:column; gap:18px; }
   .cert{ display:flex; justify-content:space-between; gap:16px; align-items:center; flex-wrap:wrap; }
@@ -537,35 +544,59 @@
     <div class="skill-group">
       <h3>Pengembangan web</h3>
       <div class="tag-wrap">
-        <span>React.js</span><span>React Router</span><span>Express.js</span><span>ASP.NET Core MVC</span>
-        <span>REST API</span><span>JavaScript</span><span>HTML/CSS</span><span>PHP</span><span>KafkaJS</span>
+        <span title="React.js"><i class="devicon-react-original colored"></i><span class="sr-only">React.js</span></span>
+        <span title="React Router"><i class="fa-solid fa-route"></i><span class="sr-only">React Router</span></span>
+        <span title="Express.js"><i class="devicon-express-original"></i><span class="sr-only">Express.js</span></span>
+        <span title="ASP.NET Core MVC"><i class="devicon-dotnetcore-plain colored"></i><span class="sr-only">ASP.NET Core MVC</span></span>
+        <span title="REST API"><i class="fa-solid fa-plug"></i><span class="sr-only">REST API</span></span>
+        <span title="JavaScript"><i class="devicon-javascript-plain colored"></i><span class="sr-only">JavaScript</span></span>
+        <span title="HTML/CSS" class="multi"><i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i><span class="sr-only">HTML/CSS</span></span>
+        <span title="PHP"><i class="devicon-php-plain colored"></i><span class="sr-only">PHP</span></span>
+        <span title="KafkaJS"><i class="devicon-apachekafka-original colored"></i><span class="sr-only">KafkaJS</span></span>
       </div>
     </div>
     <div class="skill-group">
       <h3>Database &amp; tools</h3>
       <div class="tag-wrap">
-        <span>MySQL</span><span>PostgreSQL</span><span>Microsoft Access</span><span>Python</span>
-        <span>Git/GitHub</span><span>Docker (dasar)</span><span>Machine learning (dasar)</span>
+        <span title="MySQL"><i class="devicon-mysql-plain colored"></i><span class="sr-only">MySQL</span></span>
+        <span title="PostgreSQL"><i class="devicon-postgresql-plain colored"></i><span class="sr-only">PostgreSQL</span></span>
+        <span title="Microsoft Access"><i class="fa-solid fa-database"></i><span class="sr-only">Microsoft Access</span></span>
+        <span title="Python"><i class="devicon-python-plain colored"></i><span class="sr-only">Python</span></span>
+        <span title="Git/GitHub" class="multi"><i class="devicon-git-plain colored"></i><i class="devicon-github-original"></i><span class="sr-only">Git/GitHub</span></span>
+        <span title="Docker (dasar)"><i class="devicon-docker-plain colored"></i><span class="sr-only">Docker (dasar)</span></span>
+        <span title="Machine learning (dasar)"><i class="fa-solid fa-brain"></i><span class="sr-only">Machine learning (dasar)</span></span>
       </div>
     </div>
     <div class="skill-group">
       <h3>Jaringan &amp; keamanan</h3>
       <div class="tag-wrap">
-        <span>Jaringan komputer</span><span>Linux/System Administration</span><span>Digital forensic (dasar)</span>
-        <span>Cybersecurity fundamentals</span><span>Threat detection</span><span>Network vulnerabilities</span>
+        <span title="Jaringan komputer"><i class="fa-solid fa-network-wired"></i><span class="sr-only">Jaringan komputer</span></span>
+        <span title="Linux/System Administration"><i class="devicon-linux-plain colored"></i><span class="sr-only">Linux/System Administration</span></span>
+        <span title="Digital forensic (dasar)"><i class="fa-solid fa-fingerprint"></i><span class="sr-only">Digital forensic (dasar)</span></span>
+        <span title="Cybersecurity fundamentals"><i class="fa-solid fa-shield-halved"></i><span class="sr-only">Cybersecurity fundamentals</span></span>
+        <span title="Threat detection"><i class="fa-solid fa-triangle-exclamation"></i><span class="sr-only">Threat detection</span></span>
+        <span title="Network vulnerabilities"><i class="fa-solid fa-bug"></i><span class="sr-only">Network vulnerabilities</span></span>
       </div>
     </div>
     <div class="skill-group">
       <h3>Multimedia &amp; desain</h3>
       <div class="tag-wrap">
-        <span>Character design</span><span>Branding</span><span>Color guideline</span><span>Business model canvas</span>
+        <span title="Character design"><i class="fa-solid fa-pen-nib"></i><span class="sr-only">Character design</span></span>
+        <span title="Branding"><i class="fa-solid fa-tag"></i><span class="sr-only">Branding</span></span>
+        <span title="Color guideline"><i class="fa-solid fa-palette"></i><span class="sr-only">Color guideline</span></span>
+        <span title="Business model canvas"><i class="fa-solid fa-table-cells"></i><span class="sr-only">Business model canvas</span></span>
       </div>
     </div>
     <div class="skill-group">
       <h3>Skill personal</h3>
       <div class="tag-wrap">
-        <span>Komunikatif</span><span>Kerja sama tim</span><span>Adaptif</span><span>Cekatan</span>
-        <span>Teliti</span><span>Problem solving</span><span>Cepat belajar</span>
+        <span title="Komunikatif"><i class="fa-solid fa-comments"></i><span class="sr-only">Komunikatif</span></span>
+        <span title="Kerja sama tim"><i class="fa-solid fa-people-group"></i><span class="sr-only">Kerja sama tim</span></span>
+        <span title="Adaptif"><i class="fa-solid fa-arrows-rotate"></i><span class="sr-only">Adaptif</span></span>
+        <span title="Cekatan"><i class="fa-solid fa-bolt"></i><span class="sr-only">Cekatan</span></span>
+        <span title="Teliti"><i class="fa-solid fa-magnifying-glass"></i><span class="sr-only">Teliti</span></span>
+        <span title="Problem solving"><i class="fa-solid fa-puzzle-piece"></i><span class="sr-only">Problem solving</span></span>
+        <span title="Cepat belajar"><i class="fa-solid fa-graduation-cap"></i><span class="sr-only">Cepat belajar</span></span>
       </div>
     </div>
   </section>
