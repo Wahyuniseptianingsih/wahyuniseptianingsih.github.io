@@ -190,7 +190,11 @@
   .tag-wrap span{ font-size:13.5px; color:var(--ink-muted); background:var(--panel); border-radius:20px; padding:6px 13px; }
 
   .cert-list{ display:flex; flex-direction:column; gap:18px; }
-  .cert{ display:flex; justify-content:space-between; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  .cert{ display:flex; justify-content:space-between; gap:16px; align-items:center; flex-wrap:wrap; }
+  .cert-thumb{ width:68px; height:48px; object-fit:cover; border-radius:6px; border:1px solid var(--line); cursor:pointer; flex-shrink:0; box-shadow:0 6px 14px -8px rgba(124,87,201,0.35); transition:transform .15s ease; }
+  .cert-thumb:hover{ transform:scale(1.06); }
+  .cert-thumb-placeholder{ width:68px; flex-shrink:0; }
+  .cert-info{ flex:1; min-width:200px; }
   .cert-name{ font-size:15px; color:var(--ink); font-weight:600; }
   .cert-org{ font-size:13.5px; color:var(--ink-muted); }
   .cert-link{ font-size:13px; }
@@ -232,7 +236,7 @@
     <div class="hero-grid">
       <div>
         <h1>Wahyuni Septianingsih</h1>
-        <p class="tagline">Halo, saya Wahyuni Septianingsih  fresh graduate S1 Informatika dari Universitas Amikom Purwokerto dengan IPK 3.36, asal Banjarnegara, Jawa Tengah. Ketertarikan saya pada dunia IT tumbuh sejak SMK di jurusan Sistem Informasi, Jaringan, dan Aplikasi, dan sejak itu rasa ingin tahu itu yang terus mendorong saya untuk terus menggali lebih dalam, bukan sekadar menyelesaikan tugas. Di luar layar komputer, saya orang yang suka membaca buku dan mendengarkan musik saat bekerja atau belajar, serta suka alam. Dari situ saya belajar bahwa hasil yang baik butuh proses yang sabar dan konsisten, bukan jalan pintas. Prinsip itu yang saya bawa ke cara saya belajar hal baru dan menyelesaikan setiap tanggung jawab yang saya pegang.</p>
+        <p class="tagline">Halo, saya Wahyuni Septianingsih — fresh graduate S1 Informatika dari Universitas Amikom Purwokerto dengan IPK 3.36, asal Banjarnegara, Jawa Tengah. Ketertarikan saya pada dunia IT tumbuh sejak SMK di jurusan Sistem Informasi, Jaringan, dan Aplikasi, dan sejak itu rasa ingin tahu itu yang terus mendorong saya untuk terus menggali lebih dalam, bukan sekadar menyelesaikan tugas. Di luar layar komputer, saya orang yang suka membaca buku dan mendengarkan musik saat bekerja atau belajar, serta suka alam — dari situ saya belajar bahwa hasil yang baik butuh proses yang sabar dan konsisten, bukan jalan pintas. Prinsip itu yang saya bawa ke cara saya belajar hal baru dan menyelesaikan setiap tanggung jawab yang saya pegang.</p>
       </div>
       <div class="lanyard-wrap" id="lanyardWrap">
         <div class="lanyard-anchor"></div>
@@ -570,41 +574,61 @@
     <h2 class="section-title">Sertifikasi/Pelatihan</h2>
     <div class="cert-list">
       <div class="cert">
-        <div>
+        <img class="cert-thumb" src="assets/cert-cisco-cybersecurity.jpg" alt="Sertifikat Introduction to Cybersecurity - Cisco" onclick="window.open(this.src,'_blank')">
+        <div class="cert-info">
           <div class="cert-name">Introduction to Cybersecurity</div>
           <div class="cert-org">Cisco Networking Academy, 2026</div>
         </div>
         <a class="cert-link" href="https://www.credly.com/badges/e681faaa-cb3f-4252-a2ae-f77b3ae44c7a/public_url" target="_blank" rel="noopener">Lihat kredensial</a>
       </div>
       <div class="cert">
-        <div>
+        <img class="cert-thumb" src="assets/cert-komdigi-cybersecurity.jpg" alt="Sertifikat Introduction to Cyber Security and Career Awareness - Komdigi" onclick="window.open(this.src,'_blank')">
+        <div class="cert-info">
+          <div class="cert-name">Introduction to Cyber Security and Career Awareness</div>
+          <div class="cert-org">Digital Talent Scholarship, Komdigi, 2026</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-thumb-placeholder"></div>
+        <div class="cert-info">
           <div class="cert-name">Web Development Skill Badges (HTML, CSS, JavaScript)</div>
           <div class="cert-org">Google Developer Program, 2026</div>
         </div>
         <a class="cert-link" href="https://me.developers.google.com/u/102595790121260510331" target="_blank" rel="noopener">Lihat kredensial</a>
       </div>
       <div class="cert">
-        <div>
+        <img class="cert-thumb" src="assets/cert-rh124.jpg" alt="Sertifikat RH 124 Red Hat Enterprise Linux System Administration" onclick="window.open(this.src,'_blank')">
+        <div class="cert-info">
           <div class="cert-name">RH 124: Red Hat Enterprise Linux System Administration I</div>
           <div class="cert-org">Universitas Amikom Purwokerto, 2025</div>
         </div>
       </div>
       <div class="cert">
-        <div>
+        <img class="cert-thumb" src="assets/cert-applied-msoffice.jpg" alt="Sertifikat Applied Microsoft Office - Trust Training Partners" onclick="window.open(this.src,'_blank')">
+        <div class="cert-info">
           <div class="cert-name">Applied Microsoft Office</div>
           <div class="cert-org">Trust Training Partners, 2025</div>
         </div>
       </div>
       <div class="cert">
-        <div>
+        <img class="cert-thumb" src="assets/cert-lkp-inkom-teknisi-komputer.jpg" alt="Sertifikat Teknisi Komputer - LKP iNKOM" onclick="window.open(this.src,'_blank')">
+        <div class="cert-info">
           <div class="cert-name">Teknisi Komputer (Hardware &amp; Software) — Sangat Memuaskan</div>
           <div class="cert-org">LKP iNKOM, 2022</div>
         </div>
       </div>
       <div class="cert">
-        <div>
+        <img class="cert-thumb" src="assets/cert-lkp-inkom-microsoft-office.jpg" alt="Sertifikat Microsoft Office Specialist - LKP iNKOM" onclick="window.open(this.src,'_blank')">
+        <div class="cert-info">
           <div class="cert-name">Microsoft Office Specialist — Sangat Memuaskan</div>
           <div class="cert-org">LKP iNKOM, 2022</div>
+        </div>
+      </div>
+      <div class="cert">
+        <img class="cert-thumb" src="assets/cert-smk-kompetensi-sija.jpg" alt="Sertifikat Kompetensi Sistem Informatika, Jaringan, dan Aplikasi - SMK N 1 Punggelan" onclick="window.open(this.src,'_blank')">
+        <div class="cert-info">
+          <div class="cert-name">Sertifikat Kompetensi — Sistem Informatika, Jaringan, dan Aplikasi</div>
+          <div class="cert-org">SMK Negeri 1 Punggelan, 2022</div>
         </div>
       </div>
     </div>
