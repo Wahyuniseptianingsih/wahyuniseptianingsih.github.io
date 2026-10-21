@@ -179,6 +179,9 @@
   .shot-gallery img{ height:190px; border-radius:6px; border:1px solid var(--line); flex-shrink:0; scroll-snap-align:start; box-shadow:0 8px 18px -10px rgba(124,87,201,0.25); }
   .toto-photos{ display:flex; gap:10px; overflow-x:auto; margin-top:14px; padding-bottom:6px; scroll-snap-type:x proximity; }
   .toto-photos img{ height:190px; border-radius:6px; border:1px solid var(--line); flex-shrink:0; scroll-snap-align:start; box-shadow:0 8px 18px -10px rgba(124,87,201,0.25); }
+  .toto-photos a.doc-thumb{ display:block; flex-shrink:0; scroll-snap-align:start; cursor:pointer; }
+  .toto-photos a.doc-thumb img{ display:block; transition:transform .15s ease, box-shadow .15s ease; }
+  .toto-photos a.doc-thumb:hover img{ transform:translateY(-3px); box-shadow:0 14px 24px -10px rgba(124,87,201,0.45); }
   .swatches{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
   .swatch{ display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-muted);}
   .swatch i{ width:16px; height:16px; border-radius:4px; display:inline-block; border:1px solid var(--line);}
@@ -527,7 +530,9 @@
           </div>
         </div>
         <div class="toto-photos">
-          <img src="assets/jurnal-ai-karya-ilmiah.jpg" alt="Halaman pertama jurnal Analisis Pengaruh Penggunaan AI terhadap Efektivitas Penyusunan Karya Ilmiah Mahasiswa" title="ACADEMIA Vol 6 No 4">
+          <a class="doc-thumb" href="assets/jurnal-ai-karya-ilmiah.pdf" target="_blank" rel="noopener" title="Klik untuk membaca jurnal lengkap (PDF)">
+            <img src="assets/jurnal-ai-karya-ilmiah.jpg" alt="Halaman pertama jurnal Analisis Pengaruh Penggunaan AI terhadap Efektivitas Penyusunan Karya Ilmiah Mahasiswa">
+          </a>
         </div>
       </div>
     </div>
@@ -570,7 +575,9 @@
           </div>
         </div>
         <div class="toto-photos">
-          <img src="assets/jurnal-mdlc-digital-footprint.jpg" alt="Halaman pertama jurnal Efektivitas Media Animasi 2D Berbasis MDLC" title="Jurnal Minfo Polgan Vol 15 No 2">
+          <a class="doc-thumb" href="assets/jurnal-mdlc-digital-footprint.pdf" target="_blank" rel="noopener" title="Klik untuk membaca jurnal lengkap (PDF)">
+            <img src="assets/jurnal-mdlc-digital-footprint.jpg" alt="Halaman pertama jurnal Efektivitas Media Animasi 2D Berbasis MDLC">
+          </a>
         </div>
       </div>
     </div>
